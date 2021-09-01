@@ -4,3 +4,4 @@ nav:
     - Home: index.md
     - Servicetasks:
         - 'NachrichtAnMSBWService': './servicetasks/NachrichtAnMSBWService.md'
+theme: flatly
