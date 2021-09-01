@@ -1,0 +1,6 @@
+site_name: Serviceportal - Prozessdokumentation
+site_url: https://service-bw.de
+nav:
+    - Home: index.md
+    - Servicetasks:
+        - 'NachrichtAnMSBWService': './servicetasks/NachrichtAnMSBWService.md'
