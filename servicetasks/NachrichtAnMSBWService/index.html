@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        <link rel="canonical" href="https://service-bw.de/servicetasks/NachrichtAnMSBWService/">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>NachrichtAnMSBWService - Serviceportal - Prozessdokumentation</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/styles/docco.min.css">
+
+        <script src="../../js/jquery-1.10.2.min.js" defer></script>
+        <script src="../../js/bootstrap.min.js" defer></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.5.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Serviceportal - Prozessdokumentation</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="dropdown active">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Servicetasks <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="./" class="dropdown-item active">NachrichtAnMSBWService</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../.." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-secondary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#nachrichtanmsbwservice" class="nav-link">NachrichtAnMSBWService</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#vollstandiger-name" class="nav-link">Vollständiger Name</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#properties" class="nav-link">Properties</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#senderid" class="nav-link">* senderId</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#speicherlimits-von-postfachern" class="nav-link">Speicherlimits von Postfächern</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fehler-beim-versenden-von-nachrichten" class="nav-link">Fehler beim Versenden von Nachrichten</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="nachrichtanmsbwservice">NachrichtAnMSBWService</h1>
+<h2 id="vollstandiger-name">Vollständiger Name</h2>
+<p><code>de.seitenbau.serviceportal.prozess.servicetask.NachrichtAnMSBWService</code></p>
+<h2 id="properties">Properties</h2>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Pflicht</th>
+<th>Beschreibung</th>
+<th>Beispiel</th>
+<th>Default</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>empfaengerId</td>
+<td>ja</td>
+<td>IDP-Id des Empfängers</td>
+<td>${startedBy}</td>
+<td></td>
+</tr>
+<tr>
+<td>senderId</td>
+<td>nein *</td>
+<td>IDP-Id des Senders</td>
+<td>${startedBy}</td>
+<td></td>
+</tr>
+<tr>
+<td>betreff</td>
+<td>nein</td>
+<td>Subject der Nachricht</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>text</td>
+<td>nein</td>
+<td>Text der Nachricht</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>anhaenge</td>
+<td>nein</td>
+<td>Die Anhänge der Nachricht. Set, List, Array oder einzelnes Objekt der Klassen FormContent oder BinaryContent</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>saveToSentFolder</td>
+<td>nein</td>
+<td>Gibt an, ob die Nachrich im Gesendet-Ordner des Senders gespeichert werden soll.</td>
+<td></td>
+<td>true</td>
+</tr>
+<tr>
+<td>language</td>
+<td>nein</td>
+<td>Sprache der Nachricht, de oder en oder fr</td>
+<td></td>
+<td>de</td>
+</tr>
+</tbody>
+</table>
+<p>In Text und Betreff der Nachricht kann über den Platzhalter  {{LINK_AUF_AKTUELLEN_PROZESS}} ein Link zum Prozess zur Verfügung  gestellt werden.</p>
+<h2 id="senderid">* senderId</h2>
+<p>Natürlich benötigt jede Nachricht einen Absender. Falls dieses Feld leer gelassen wird, so wird der in der Systemkonfiguration angegebene  Standartabsender verwendet. Die Kopie der Nachricht im Gesendet-Ordner  kann in diesem Fall nur über Zugang zu dem Standartkonto erreicht  werden, bzw. zukünftig wird je nach Konfiguration keine Kopie mehr  erstellt.</p>
+<h2 id="speicherlimits-von-postfachern">Speicherlimits von Postfächern</h2>
+<p>Beim Versenden von Servicekonto-Nachrichten mittels dieses Servicetasks werden Speicherlimits <strong>nicht</strong> berücksichtigt, d.h.Nachrichten werden fehlerfrei versendet auch wenn beim Postfach des Absenders und/oder des Empfänger das Speicherlimit überschritten ist.</p>
+<p>Siehe hierzu auch die <a href="https://wiki.amt24.sachsen.de/bin/view/Übergreifendes/Speicherlimits im Servicekonto-Postfach/">Hinweise zu Speicherplatzlimits bei Servicekonto-Postfächern</a>.</p>
+<h2 id="fehler-beim-versenden-von-nachrichten">Fehler beim Versenden von Nachrichten</h2>
+<p>Tritt beim Versenden einer Servicekonto-Nachricht ein Fehler auf, so erfolgt  ein Rollback zum letzten User-Task vor dem Service-Task. Der Benutzer,  der für diesen User-Task zuständig war, bekommt in diesem Fall das  entsprechende Formular mit einem generischen Hinweis angezeigt, dass ein Fehler aufgetreten ist. Weitere Prozessteilnehmer werden nicht  benachrichtigt.</p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js" defer></script>
+        <script src="../../search/main.js" defer></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
